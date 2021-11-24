@@ -25,7 +25,7 @@ it('get link preview html', () => {
   ogData.url = 'https://github.com/junkawa/figma_jp';
   const result = md.render('[@preview](https://github.com/junkawa/figma_jp)');
   expect(result).toMatch(
-      '<p><div class="link-preview-widget"><a href="https://github.com/junkawa/figma_jp" rel="noopener" target="_blank"><div class="link-preview-widget-title">junkawa/figma_jp</div><div class="link-preview-widget-description">Japanese Chrome Extension for figma. Contribute to junkawa/figma_jp development by creating an account on GitHub.</div><div class="link-preview-widget-url">GitHub</div></a><a class="link-preview-widget-image" href="https://github.com/junkawa/figma_jp" rel="noopener" style="background-image: url(\'https://repository-images.githubusercontent.com/292775522/57a0a600-f246-11ea-9b1a-078a5abb05e8\');" target="_blank"></a></div></p>',
+      '<p><div class="card ms-md-5 me-md-5"><img src="https://repository-images.githubusercontent.com/292775522/57a0a600-f246-11ea-9b1a-078a5abb05e8" class="card-img-top" alt="junkawa/figma_jp"><div class="card-body"><h5 class="card-title text-truncate">junkawa/figma_jp</h5><p class="card-text m-0 lh-sm lp-desc"><small>Japanese Chrome Extension for figma. Contribute to junkawa/figma_jp development by creating an account on GitHub.</small></p><p class="card-text lp-url"><small class="text-muted">https://github.com/junkawa/figma_jp</small></p></div></div></p>',
   );
   /* eslint-enable max-len */
 });

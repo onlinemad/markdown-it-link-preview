@@ -2,35 +2,13 @@ const getOgData = require('./get_og_data');
 
 function linkPreviewHtml(ogData) {
   return (
-    '<div class="link-preview-widget">' +
-    '<a ' +
-    'href="' +
-    ogData.url +
-    '" ' +
-    'rel="noopener" ' +
-    'target="_blank"' +
-    '>' +
-    '<div class="link-preview-widget-title">' +
-    ogData.title +
+    '<div class="card ms-md-5 me-md-5">' +
+    '<img src="' + ogData.image + '" class="card-img-top" alt="' + ogData.title + '">' +
+    '<div class="card-body">' +
+    '<h5 class="card-title text-truncate">' + ogData.title + '</h5>' +
+    '<p class="card-text m-0 lh-sm lp-desc"><small>' + ogData.description + '</small></p>' +
+    '<p class="card-text lp-url"><small class="text-muted">' + ogData.url + '</small></p>' +
     '</div>' +
-    '<div class="link-preview-widget-description">' +
-    ogData.description +
-    '</div>' +
-    '<div class="link-preview-widget-url">' +
-    ogData.site_name +
-    '</div>' +
-    '</a>' +
-    '<a ' +
-    'class="link-preview-widget-image" ' +
-    'href="' +
-    ogData.url +
-    '" ' +
-    'rel="noopener" ' +
-    'style="background-image: url(\'' +
-    ogData.image +
-    '\');" ' +
-    'target="_blank"' +
-    '></a>' +
     '</div>'
   );
 }
