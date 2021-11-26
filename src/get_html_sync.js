@@ -1,3 +1,4 @@
+const crypto = require('crypto')
 const fetch = require('sync-fetch')
 const fs = require('fs')
 const os = require('os')
