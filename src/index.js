@@ -1,9 +1,10 @@
 const getOgData = require('./get_og_data');
 
 function linkPreviewHtml(ogData) {
+  let img = ogData.image && ogData.image !== '' ? '<img src="' + ogData.image + '" class="card-img-top lp-img-top" alt="' + ogData.title + '" loading="lazy">' : ''
   return (
     '<div class="card ms-md-5 me-md-5 lp-card">' +
-    '<img src="' + ogData.image + '" class="card-img-top lp-img-top" alt="' + ogData.title + '" loading="lazy">' +
+    img +
     '<div class="card-body">' +
     '<h5 class="card-title text-truncate lp-title"><a href="' + ogData.url + '" target="_blank">' + ogData.title + '</a></h5>' +
     '<p class="card-text m-0 lh-sm lp-desc"><small>' + ogData.description + '</small></p>' +
